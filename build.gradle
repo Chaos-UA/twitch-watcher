@@ -1,0 +1,40 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.8.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compileOnly 'org.projectlombok:lombok:1.16.18'
+	compile('org.springframework.boot:spring-boot-starter')
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile 'org.apache.commons:commons-lang3:3.6'
+	compile 'org.seleniumhq.selenium:selenium-chrome-driver:3.3.1'
+	testCompile("junit:junit")
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+
+	String jacksonVersion = "2.9.2";
+	compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: jacksonVersion
+	compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: jacksonVersion
+	compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: jacksonVersion
+
+}
