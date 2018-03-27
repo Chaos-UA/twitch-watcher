@@ -31,7 +31,7 @@ dependencies {
 	testCompile("junit:junit")
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
-	//
+	//2
 	String jacksonVersion = "2.9.2";
 	compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: jacksonVersion
 	compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: jacksonVersion
